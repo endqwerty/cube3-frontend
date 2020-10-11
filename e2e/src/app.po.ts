@@ -1,11 +1,14 @@
-import { browser, by, element } from 'protractor';
+import { $, browser } from 'protractor';
 
 export class AppPage {
-  navigateTo(): Promise<unknown> {
+  navigateTo (): Promise<unknown> {
     return browser.get(browser.baseUrl) as Promise<unknown>;
   }
 
-  getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+  getBaseTemplateText (): Promise<string> {
+    return $('[automation=base-template]').getText() as Promise<string>;
+  }
+  getDashboardText (): Promise<string> {
+    return $('[automation=dashboard]').getText() as Promise<string>;
   }
 }
