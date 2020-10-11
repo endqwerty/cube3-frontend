@@ -2,13 +2,34 @@ version: 2.1
 orbs:
   node: circleci/node@4.1.0
   browser-tools: circleci/browser-tools@1.0.1
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: '14'
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run build
 workflows:
   node-tests:
     jobs:
       - node/test:
+          name: test-lint
           run-command: lint
-      - node/test
       - node/test:
+          name: test-unit
+      - node/test:
+          name: test-e2e
           setup:
               - browser-tools/install-chrome
           run-command: e2e
+      - build:
+          name: build
+          requires:
+            - test-lint
+            - test-unit
+            - test-e2e
+
+
