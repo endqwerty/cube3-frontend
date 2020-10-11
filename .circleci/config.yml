@@ -9,5 +9,6 @@ workflows:
           run-command: lint
       - node/test
       - node/test:
-          setup: browser-tools/install-chrome
+          setup:
+              - browser-tools/install-chrome
           run-command: e2e
