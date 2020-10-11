@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "cube3-9a6a0"
+  },
+  "targets": {
+    "cube3-9a6a0": {
+      "hosting": {
+        "cube3": [
+          "cube3-9a6a0"
+        ]
+      }
+    }
+  }
+}
