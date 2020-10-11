@@ -39,6 +39,11 @@ The interface should not make it harder for the user to perform core functions.
 
 ## Development
 
+### Special Note about Node
+
+NVM is the recommended Node version manager. A `.nvmrc` file is included. You should be able to run `nvm install` and be directed to the supported Node version.
+If not, the recommended development verion is Node 12.16.1, however, development should attempt to ensure compatibility across all versions of Node > 10.
+
 ### Local dev server for minimal work
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -80,6 +85,15 @@ Run periodically and ensure passing before PR merges
 
 * `ng e2e`
 * `ng lint`
+
+### CI
+
+All CI commands should be npm scripts.
+CI commands in CircleCI's config.yml should not include params or args.
+All params or args should be in npm scipts that are prepended with `ci-`
+All devs should be able to validate exactly how tests are executed on CI by looking for npm scripts that start with `ci-`
+Be aware that setup and configs are often still in CircleCI's `.circleci/config.yml` file.
+CircleCI config should be designed to make use of CircleCI's caching as much as reasonable to speed up tests and ensure build speed.
 
 ## Angular CLI Help
 

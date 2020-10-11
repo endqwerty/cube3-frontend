@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('H1').textContent).toContain('HI');
+    expect(compiled.querySelector('[automation=base-template]').textContent).toContain('Hi');
   });
 });
