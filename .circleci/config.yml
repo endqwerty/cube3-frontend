@@ -27,7 +27,7 @@ workflows:
           name: test-e2e
           setup:
               - browser-tools/install-chrome
-          run-command: cie2e
+          run-command: ci-e2e
       - build:
           name: build
           requires:
