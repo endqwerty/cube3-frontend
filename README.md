@@ -2,6 +2,36 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
+This project is intended to be a [CubeTutor](https://www.cubetutor.com/) replacement as the original maintainer of CubeTutor is unable to continue
+
+## Design and development
+
+This project is early in its development. Core framework and architecture is still being setup and will likely change several times during early development.
+
+The guiding principle is to attempt to stay within optimal Angular and Firebase development practices
+
+CircleCI is the intended CI platform and will be added eventually
+
+Features should mimic what exists in Cubetutor at a high level
+
+* CRUD functions for Cubes
+* user account management
+* ownership of cubes
+* cube update/changelog
+* MTG card viewing
+* Cube card version selection (low priority)
+* custom card version uploading (low priority)
+* virtual cube draft (low priority)
+* draft bots (low low priority) (high high effort)
+* Cubetutor import
+  * cube
+  * history
+  * custom artwork
+  * draft history
+
+Actual implementation should follow Material UI and general UX best practices in an attempt to intentionaly design the UI.
+The interface should not make it harder for the user to perform core functions.
+
 ## Requirements
 
 * Angular CLI
