@@ -17,16 +17,17 @@ workflows:
     jobs:
       - node/test:
           name: test-lint
-          run-command: lint
+          run-command: ci-lint
       - node/test:
           name: test-unit
           setup:
               - browser-tools/install-chrome
+          run-command: ci-test
       - node/test:
           name: test-e2e
           setup:
               - browser-tools/install-chrome
-          run-command: e2e
+          run-command: cie2e
       - build:
           name: build
           requires:
