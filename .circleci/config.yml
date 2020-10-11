@@ -20,6 +20,8 @@ workflows:
           run-command: lint
       - node/test:
           name: test-unit
+          setup:
+              - browser-tools/install-chrome
       - node/test:
           name: test-e2e
           setup:
