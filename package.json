@@ -11,7 +11,8 @@
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "ci-lint": "ng lint",
     "ci-test": "ng test --watch=false --progress=false --codeCoverage=true",
-    "ci-e2e": "ng e2e"
+    "ci-e2e": "ng e2e",
+    "postinstall": "ngcc"
   },
   "private": true,
   "dependencies": {
