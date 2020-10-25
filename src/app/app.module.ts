@@ -8,7 +8,6 @@ import { CubesComponent } from './cubes/cubes.component';
 import { CardComponent } from './card/card.component';
 // 1. Import the libs you need
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { RegisterComponent } from './admin/register/register.component';
 import { VerifyEmailComponent } from './admin/verify-email/verify-email.component';
@@ -44,7 +43,6 @@ const firebaseConfig = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule, // auth
-    AngularFirestoreModule // firestore
   ],
   providers: [],
   bootstrap: [AppComponent]
