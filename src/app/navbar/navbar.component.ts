@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constants } from '../../string-resources';
 
 @Component({
-  selector: 'cube3-navbar',
+  selector: 'app-cube3-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
