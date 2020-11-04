@@ -1,6 +1,6 @@
-import { Container } from '@angular/compiler/src/i18n/i18n_ast';
+
 import { Component, OnInit } from '@angular/core';
-import { Constants } from '../../string-resources';
+import { Constants } from '../../en-us';
 
 @Component({
   selector: 'app-cube3-navbar',
