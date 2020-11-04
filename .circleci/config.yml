@@ -38,10 +38,10 @@ workflows:
           setup:
               - browser-tools/install-chrome
           run-command: ci-e2e
-      - build:
-          name: build
-          requires:
-            - test-lint
-            - test-unit
-            - test-e2e
+      # - build:
+      #     name: build
+      #     requires:
+      #       - test-lint
+      #       - test-unit
+      #       - test-e2e
 
