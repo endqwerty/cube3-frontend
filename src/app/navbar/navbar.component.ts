@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Constants } from '../../en-us';
+import { Constants } from '../../lang/en-us';
 
 @Component({
   selector: 'app-cube3-navbar',
@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
   }
 
 }
