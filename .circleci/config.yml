@@ -44,11 +44,4 @@ workflows:
             - test-lint
             - test-unit
             - test-e2e
-      - deploy:
-          name: deploy
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
 
