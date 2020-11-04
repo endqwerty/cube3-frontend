@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "ng e2e --port=4202",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "ci-lint": "ng lint",
     "ci-test": "ng test --watch=false --progress=false --codeCoverage=true",

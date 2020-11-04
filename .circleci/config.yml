@@ -12,6 +12,16 @@ jobs:
       - node/install-packages
       - run:
           command: npm run build
+  deploy:
+    executor:
+      name: node/default
+      tag: '12.16.1'
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Deploy Master to Firebase
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 workflows:
   node-tests:
     jobs:
@@ -34,5 +44,11 @@ workflows:
             - test-lint
             - test-unit
             - test-e2e
-
+      - deploy:
+          name: deploy
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
 
