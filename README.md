@@ -1,5 +1,9 @@
 # Cube3
 
+[![codecov](https://codecov.io/gh/endqwerty/cube3-frontend/branch/main/graph/badge.svg)](https://codecov.io/gh/endqwerty/cube3-frontend)
+
+[![Coverage Status](https://coveralls.io/repos/github/endqwerty/cube3-frontend/badge.svg?branch=main)](https://coveralls.io/github/endqwerty/cube3-frontend?branch=main)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
 
 This project is intended to be a [CubeTutor](https://www.cubetutor.com/) replacement as the original maintainer of CubeTutor is unable to continue
