@@ -22,7 +22,7 @@ jobs:
       - node/install-packages
       - browser-tools/install-chrome
       - run:
-          command: ci-test
+          command: npm run ci-test
       - coveralls/upload
 workflows:
   node-tests:
