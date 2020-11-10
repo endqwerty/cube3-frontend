@@ -23,7 +23,8 @@ jobs:
       - browser-tools/install-chrome
       - run:
           command: npm run ci-test
-      - coveralls/upload
+      - coveralls/upload:
+          path_to_lcov: './coverage/cube3/lcov.info'
 workflows:
   node-tests:
     jobs:
