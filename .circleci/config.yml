@@ -18,16 +18,19 @@ workflows:
       - node/test:
           name: test-lint
           run-command: ci-lint
+          version: '12.16.1'
       - node/test:
           name: test-unit
           setup:
               - browser-tools/install-chrome
           run-command: ci-test
+          version: '12.16.1'
       - node/test:
           name: test-e2e
           setup:
               - browser-tools/install-chrome
           run-command: ci-e2e
+          version: '12.16.1'
       - build:
           name: build
           requires:
